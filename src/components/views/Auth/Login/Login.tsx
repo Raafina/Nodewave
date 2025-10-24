@@ -13,7 +13,7 @@ import {
   FloatingLabel,
 } from '@/components/ui/floating-label-input';
 
-export default function LoginPage() {
+export default function Login() {
   const {
     visiblePassword,
     toggleVisibility,
@@ -46,10 +46,7 @@ export default function LoginPage() {
                     <FloatingInput
                       {...field}
                       id="floating-customize"
-                      className={cn(
-                        'border-gray-300 focus-visible:ring-blue-500',
-                        errors.email && 'border-red-500'
-                      )}
+                      className={cn(errors.email && 'border-red-500')}
                     />
                     <FloatingLabel htmlFor="floating-customize">
                       Your Email / Username
@@ -74,10 +71,7 @@ export default function LoginPage() {
                       {...field}
                       id="floating-customize"
                       type={visiblePassword ? 'text' : 'password'}
-                      className={cn(
-                        'border-gray-300 focus-visible:ring-blue-500',
-                        errors.password && 'border-red-500'
-                      )}
+                      className={cn(errors.password && 'border-red-500')}
                     />
                     <FloatingLabel htmlFor="floating-customize">
                       Enter Password

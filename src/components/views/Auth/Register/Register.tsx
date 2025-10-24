@@ -21,7 +21,7 @@ import Link from 'next/link';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
-export default function RegisterPage() {
+export default function Register() {
   const { control, visiblePassword, handleVisiblePassword, errors } =
     useRegister();
   return (
