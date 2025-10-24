@@ -10,13 +10,19 @@ export async function middleware(request: NextRequest) {
         secret: environment.AUTH_SECRET,
     });
 
+    if (!token) {
+        return NextResponse.redirect(new URL("/auth/login", request.url));
+    }
+
     const { pathname } = request.nextUrl;
 
-    if (pathname === "/auth/login" || pathname === "/auth/register") {
+    if (pathname === "/auth/login" || pathname === "/auth/register" || pathname === "/") {
         if (token) {
-            return NextResponse.redirect(new URL("/", request.url));
+            return NextResponse.redirect(new URL("/task", request.url));
         }
     }
+
+
 }
 
 export const config = {
