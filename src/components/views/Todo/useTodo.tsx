@@ -115,8 +115,8 @@ const useTodo = () => {
     },
     onSuccess: () => {
       toast.success('Success delete Task');
-      refetchTodo(); // agar list ter-update setelah delete
-      setSelectedId(''); // reset selection
+      refetchTodo();
+      setSelectedId('');
     },
   });
 

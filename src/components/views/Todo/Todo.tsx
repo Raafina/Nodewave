@@ -10,7 +10,7 @@ import { Controller } from 'react-hook-form';
 import { cn } from '@/utils/cn';
 import { useEffect } from 'react';
 
-export default function Todo() {
+const Todo = () => {
   const {
     control,
     handleSubmit,
@@ -54,11 +54,14 @@ export default function Todo() {
                     {...field}
                     autoFocus
                     type="text"
-                    className={cn(errors.item && 'border-red-500!')}
+                    className={cn(
+                      'border-black!',
+                      errors.item && 'border-red-500!'
+                    )}
                   />
                 )}
               />
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" className="h-12">
                 Add Todo
               </Button>
             </form>
@@ -104,4 +107,6 @@ export default function Todo() {
       </div>
     </>
   );
-}
+};
+
+export default Todo;

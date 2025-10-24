@@ -21,7 +21,7 @@ import Link from 'next/link';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
-export default function Register() {
+const Register = () => {
   const { control, visiblePassword, handleVisiblePassword, errors } =
     useRegister();
   return (
@@ -290,4 +290,6 @@ export default function Register() {
       </Card>
     </div>
   );
-}
+};
+
+export default Register;

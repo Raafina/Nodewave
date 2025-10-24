@@ -13,7 +13,7 @@ import {
   FloatingLabel,
 } from '@/components/ui/floating-label-input';
 
-export default function Login() {
+const Login = () => {
   const {
     visiblePassword,
     toggleVisibility,
@@ -133,4 +133,6 @@ export default function Login() {
       </p>
     </div>
   );
-}
+};
+
+export default Login;
